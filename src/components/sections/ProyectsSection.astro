@@ -12,7 +12,11 @@ import { PROYECTS } from '@/constants/proyects.ts'
 	{
 		PROYECTS.map(proyect => (
 			<article class='block h-fit max-w-sm rounded-lg border border-black bg-transparent p-6 shadow-2xl transition-all backdrop:blur-2xl hover:scale-105 dark:bg-zinc-900'>
-				<a href={proyect.link}>
+				<a
+					href={proyect.link}
+					rel='noopener'
+					target='_blank'
+				>
 					<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
 						{proyect.title}
 					</h5>

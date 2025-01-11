@@ -5,6 +5,7 @@ import UserIcon from '@/components/icons/UserIcons.astro'
 import ContactIcon from '@/components/icons/ContactIcon.astro'
 import ProyectosSection from '@/components/sections/ProyectsSection.astro'
 import Hero from '@/components/sections/Hero.astro'
+import About from '@/components/sections/About.astro'
 ---
 
 <Layout
@@ -28,14 +29,11 @@ import Hero from '@/components/sections/Hero.astro'
 			<h2 class='inline-flex items-center gap-2 text-2xl font-bold'>
 				<UserIcon class='size-8' />Sobre mí
 			</h2>
+			<About />
 		</Section>
 		<Section
 			id='#contacto'
 			classname='mt-20 p-2 md:px-4'
-		>
-			<h2 class='inline-flex items-center gap-2 text-2xl font-bold'>
-				<ContactIcon class='size-8' />Contacto
-			</h2>
-		</Section>
+		/>
 	</main>
 </Layout>

@@ -5,6 +5,9 @@ import NodeIcon from '@/components/icons/NodeIcon.astro'
 import ReactIcon from '@/components/icons/ReactIcon.astro'
 import TailwindcssIcon from '@/components/icons/TailwindcssIcons.astro'
 import TypescriptIcon from '@/components/icons/TypescriptIcon.astro'
+import NeovimIcon from '@/components/icons/NeovimIcon.astro'
+import TmuxIcon from '@/components/icons/TmuxIcon.astro'
+import WeztermIcon from '@/components/icons/WeztermIcon.astro'
 
 const TAGS = {
 	MONGO: {
@@ -41,6 +44,21 @@ const TAGS = {
 		name: 'Typescript',
 		class: 'bg-sky-500 border-2 border-sky-900 text-white',
 		icon: TypescriptIcon
+	},
+	NEOVIM: {
+		name: 'Neovim',
+		class: 'bg-emerald-500 border-2 border-emerald-900 text-white',
+		icon: NeovimIcon
+	},
+	TMUX: {
+		name: 'Tmux',
+		class: 'bg-gray-500 border-2 border-gray-900 text-white',
+		icon: TmuxIcon
+	},
+	WEZTERM: {
+		name: 'Wezterm',
+		class: 'bg-violet-500 border-2 border-violet-900 text-white',
+		icon: WeztermIcon
 	}
 }
 
@@ -81,5 +99,13 @@ export const PROYECTS = [
 		link: 'https://github.com/kete102/Cat-Facts-with-Image',
 		image: '#',
 		techStack: [TAGS.REACT, TAGS.TYPESCRIPT]
+	},
+	{
+		title: 'My dotfiles',
+		description:
+			'Repositorio con mis configuraciones personalizadas para Neovim, tmux, WezTerm y bashrc, diseñadas para maximizar la productividad.',
+		link: 'https://github.com/kete102/dotFiles',
+		image: '#',
+		techStack: [TAGS.NEOVIM, TAGS.TMUX, TAGS.WEZTERM]
 	}
 ]
