@@ -1,10 +1,10 @@
-import ExpressIcon from '../components/icons/ExpressIcon.astro'
-import FirebaseIcon from '../components/icons/FirebaseIcon.astro'
-import MongoIcon from '../components/icons/MongoIcon.astro'
-import NodeIcon from '../components/icons/NodeIcon.astro'
-import ReactIcon from '../components/icons/ReactIcon.astro'
-import TailwindcssIcon from '../components/icons/TailwindcssIcons.astro'
-import TypescriptIcon from '../components/icons/TypescriptIcon.astro'
+import ExpressIcon from '@/components/icons/ExpressIcon.astro'
+import FirebaseIcon from '@/components/icons/FirebaseIcon.astro'
+import MongoIcon from '@/components/icons/MongoIcon.astro'
+import NodeIcon from '@/components/icons/NodeIcon.astro'
+import ReactIcon from '@/components/icons/ReactIcon.astro'
+import TailwindcssIcon from '@/components/icons/TailwindcssIcons.astro'
+import TypescriptIcon from '@/components/icons/TypescriptIcon.astro'
 
 const TAGS = {
 	MONGO: {
