@@ -7,11 +7,11 @@ import { PROYECTS } from '@/constants/proyects.ts'
 	<ProyectsIcon class='size-8' />Proyectos
 </h2>
 <div
-	class='mx-auto mt-6 grid w-full grid-cols-1 gap-y-6 md:grid-cols-2 md:gap-x-2 lg:gap-x-4'
+	class='mx-auto mt-6 grid w-full grid-cols-1 gap-y-4 md:grid-cols-2 md:gap-x-2 lg:gap-x-4'
 >
 	{
 		PROYECTS.map(proyect => (
-			<article class='block h-fit max-w-sm cursor-pointer rounded-lg border border-black bg-transparent p-6 shadow-2xl transition-all backdrop:blur-2xl hover:scale-105 dark:bg-zinc-900'>
+			<article class='flex h-fit max-w-sm cursor-pointer flex-col rounded-lg border border-black bg-transparent p-6 shadow-2xl transition-all backdrop:blur-2xl hover:scale-105 dark:bg-zinc-900'>
 				<a
 					href={proyect.link}
 					rel='noopener'
