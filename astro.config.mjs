@@ -3,9 +3,12 @@ import { defineConfig } from 'astro/config'
 
 import tailwind from '@astrojs/tailwind'
 
+import vercel from '@astrojs/vercel'
+
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://kete102.github.io',
-	base: 'mi-repo',
-	integrations: [tailwind()]
+	output: 'server',
+	integrations: [tailwind()],
+	adapter: vercel()
 })
+
