@@ -1,13 +1,10 @@
 ---
-import Badge from '../components/Badge.astro'
 import Layout from '../layouts/Layout.astro'
-import GitHubIcon from '../components/icons/GitHubIcon.astro'
-import LinkedInIcon from '../components/icons/LinkedInIcon.astro'
-import SocialLink from '../components/SocilaLink.astro'
 import Section from '../components/Section.astro'
 import UserIcon from '../components/icons/UserIcons.astro'
 import ContactIcon from '../components/icons/ContactIcon.astro'
-import ProyectosSection from '../components/ProyectsSection.astro'
+import ProyectosSection from '../components/sections/ProyectsSection.astro'
+import Hero from '../components/sections/Hero.astro'
 ---
 
 <Layout
@@ -16,34 +13,7 @@ import ProyectosSection from '../components/ProyectsSection.astro'
 >
 	<main class='mx-auto w-full max-w-md p-2 md:max-w-full'>
 		<Section classname='mt-8 px-2 md:px-4'>
-			<h1 class='my-1 inline-flex items-center gap-x-2 text-5xl font-bold'>
-				Flavius Catalin Neacsu
-			</h1>
-			<a
-				href='https://www.linkedin.com/in/flaviuscatalinneacsu/'
-				class='w-fit'
-				target='_blank'
-				rel='noopener'
-			>
-				<Badge>Disponible para trabajar</Badge>
-			</a>
-			<h2 class='my-4 text-pretty text-xl font-normal opacity-80'>
-				<span class='font-medium text-violet-700'>Desarrollador Web</span>.
-				Disfruto creando aplicaciones funcionales, eficientes y atractivas. Me
-				apasiona la programación y aprender cosas nuevas.
-			</h2>
-			<ul class='flex items-center gap-x-2 md:gap-x-4'>
-				<li>
-					<SocialLink link='https://github.com/kete102'>
-						<GitHubIcon class='size-6' /> GitHub
-					</SocialLink>
-				</li>
-				<li>
-					<SocialLink link='https://www.linkedin.com/in/flaviuscatalinneacsu/'>
-						<LinkedInIcon class='size-6' /> LinkedIn
-					</SocialLink>
-				</li>
-			</ul>
+			<Hero />
 		</Section>
 		<Section
 			id='#proyectos'

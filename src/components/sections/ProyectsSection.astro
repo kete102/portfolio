@@ -1,0 +1,38 @@
+---
+import ProyectsIcon from '../icons/ProyectsIcon.astro'
+import { PROYECTS } from '../../constants/proyects.ts'
+---
+
+<h2 class='inline-flex items-center gap-2 text-2xl font-bold'>
+	<ProyectsIcon class='size-8' />Proyectos
+</h2>
+<div
+	class='mx-auto mt-6 grid w-full grid-cols-1 gap-y-6 md:grid-cols-2 md:gap-x-2 lg:gap-x-4'
+>
+	{
+		PROYECTS.map(proyect => (
+			<article class='block h-fit max-w-sm rounded-lg border border-black bg-transparent p-6 shadow-2xl backdrop:blur-2xl dark:bg-zinc-900'>
+				<a href={proyect.link}>
+					<h5 class='mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white'>
+						{proyect.title}
+					</h5>
+					<p class='text-pretty font-normal text-gray-700 dark:text-gray-400'>
+						{proyect.description}
+					</p>
+					<div class='my-3'>
+						<ul class='flex flex-wrap items-center gap-x-1 gap-y-2'>
+							{proyect.techStack.map(tag => (
+								<li
+									class={`inline-flex items-center gap-2 rounded-full px-1.5 py-0.5 ${tag.class}`}
+								>
+									<span>{tag.name}</span>
+									<tag.icon class='size-5' />
+								</li>
+							))}
+						</ul>
+					</div>
+				</a>
+			</article>
+		))
+	}
+</div>

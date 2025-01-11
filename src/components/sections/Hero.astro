@@ -1,0 +1,42 @@
+---
+import Badge from '../Badge.astro'
+import GitHubIcon from '../icons/GitHubIcon.astro'
+import LinkedInIcon from '../icons/LinkedInIcon.astro'
+import SocialLink from '../SocilaLink.astro'
+---
+
+<div class='inline-flex items-center gap-x-4'>
+	<h1 class='my-1 inline-flex items-center gap-x-2 text-5xl font-bold'>
+		Flavius Catalin Neacsu
+	</h1>
+	<img
+		src='https://lh3.googleusercontent.com/ogw/AF2bZyhAbv3QFpmVf9oiRmY6zSjZt6I5ij-Ptbdkqfk2oB-O-ztW=s32-c-mo'
+		alt='flavius photo'
+		class='h-14 w-14 rounded-full'
+	/>
+</div>
+<a
+	href='https://www.linkedin.com/in/flaviuscatalinneacsu/'
+	class='w-fit'
+	target='_blank'
+	rel='noopener'
+>
+	<Badge>Disponible para trabajar</Badge>
+</a>
+<h2 class='my-4 text-pretty text-xl font-normal opacity-80'>
+	<span class='font-medium text-violet-700'>Desarrollador Web</span>. Disfruto
+	creando aplicaciones funcionales, eficientes y atractivas. Me apasiona la
+	programación y aprender cosas nuevas.
+</h2>
+<ul class='flex items-center gap-x-2 md:gap-x-4'>
+	<li>
+		<SocialLink link='https://github.com/kete102'>
+			<GitHubIcon class='size-5' /> Github
+		</SocialLink>
+	</li>
+	<li>
+		<SocialLink link='https://www.linkedin.com/in/flaviuscatalinneacsu/'>
+			<LinkedInIcon class='size-5' /> LinkedIn
+		</SocialLink>
+	</li>
+</ul>
