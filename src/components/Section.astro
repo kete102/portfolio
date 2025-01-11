@@ -1,12 +1,15 @@
 ---
 interface Props {
-  id?: string
-  classname: string
+	id?: string
+	classname: string
 }
 
-const {id, classname} = Astro.props
+const { id, classname } = Astro.props
 ---
 
-<section id={id} class={`w-full  flex flex-col mx-auto max-w-4xl ${classname}`}>
-  <slot/>
+<section
+	id={id}
+	class={`w-full  flex flex-col mx-auto max-w-4xl ${classname}`}
+>
+	<slot />
 </section>
