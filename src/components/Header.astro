@@ -20,15 +20,15 @@ const navItems = [
 ---
 
 <header
-	class='mx-auto mt-6 flex w-full max-w-sm items-center justify-between rounded-lg bg-slate-300/90 p-2 shadow-2xl backdrop:blur-2xl dark:bg-slate-950/90 md:max-w-6xl md:px-6'
+	class='mx-auto mt-4 flex w-full max-w-[400px] items-center justify-between rounded-lg bg-zinc-400/50 p-2 py-2 shadow-2xl backdrop:blur-2xl dark:bg-zinc-900/80 md:max-w-[720px] lg:max-w-4xl xl:max-w-5xl'
 >
-	<nav class='invisible flex flex-row items-center gap-x-10 px-4 md:visible'>
+	<nav class='flex w-full flex-row items-center justify-start gap-x-10 pl-1'>
 		{
 			navItems.map(item => (
 				<a
 					href={item.url}
 					aria-label={item.url}
-					class='text-lg font-medium opacity-80'
+					class='text-lg font-medium text-gray-800/70 dark:text-gray-400'
 				>
 					{item.title}
 				</a>
