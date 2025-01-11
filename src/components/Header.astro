@@ -1,0 +1,32 @@
+---
+import ThemeToggle from '../components/ThemeToggle.astro'
+const navItems = [
+  {
+    title: "Proyectos",
+    label: "proyectos",
+    url: "/#proyectos"
+  },
+  {
+    title: "Sobre mí",
+    label: "sobre-mi",
+    url: "/#sobre-mi"
+  },
+  {
+    title: "Contacto",
+    label: "contacto",
+    url: "/#contacto"
+  }
+]
+---
+
+<header class="w-full max-w-sm md:max-w-6xl md:px-6 mx-auto p-2 mt-6 flex justify-between items-center">
+<img src="https://lh3.googleusercontent.com/ogw/AF2bZyhAbv3QFpmVf9oiRmY6zSjZt6I5ij-Ptbdkqfk2oB-O-ztW=s32-c-mo" alt="flavius photo" class="rounded-full w-12 h-12"/>
+  <nav class="px-4 flex flex-row gap-x-10 items-center invisible md:visible">
+      {
+      navItems.map((item) => (
+      <a href={item.url} aria-label={item.url} class="font-medium text-lg opacity-80">{item.title}</a> 
+      ))
+      }
+  </nav>
+  <ThemeToggle />
+</header>

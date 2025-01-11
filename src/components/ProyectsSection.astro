@@ -1,0 +1,30 @@
+---
+import Section from "./Section.astro"
+import ProyectsIcon from "./icons/ProyectsIcon.astro"
+import {PROYECTS} from '../constants/proyects.ts'
+
+---
+<Section id="#proyectos" classname="mt-16 p-2 md:px-4">
+  <h2 class="inline-flex items-center gap-2 font-bold text-2xl"><ProyectsIcon class="size-8"/>Proyectos</h2>
+  <div class="mt-6 grid grid-cols-1 mx-auto md:grid-cols-2 md:gap-x-2 lg:gap-x-4 w-full gap-y-6">
+    {PROYECTS.map((proyect) => (
+    <article class="block max-w-sm p-6 border border-black h-fit bg-transparent backdrop:blur-2xl shadow-2xl dark:bg-zinc-900 rounded-lg">
+      <a 
+        href={proyect.link}>
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{proyect.title}</h5>
+        <p class="font-normal text-pretty text-gray-700 dark:text-gray-400">{proyect.description}</p>
+        <div class="my-3">
+          <ul class="flex flex-wrap items-center gap-y-2 gap-x-1">
+            {proyect.techStack.map((tag) => (
+            <li class={`inline-flex items-center gap-2 rounded-full px-1.5 py-0.5 ${tag.class}`}>
+              <span>{tag.name}</span>
+              <tag.icon class="size-5"/>
+            </li>
+            ))}
+          </ul>
+        </div>
+      </a>
+    </article>
+    ))}
+  </div>
+</Section>

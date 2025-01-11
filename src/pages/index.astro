@@ -1,0 +1,42 @@
+---
+import Badge from "../components/Badge.astro"
+import Layout from '../layouts/Layout.astro'
+import GitHubIcon from "../components/icons/GitHubIcon.astro"
+import LinkedInIcon from "../components/icons/LinkedInIcon.astro"
+import SocialLink from '../components/SocilaLink.astro'
+import Section from '../components/Section.astro'
+import UserIcon from '../components/icons/UserIcons.astro'
+import ContactIcon from "../components/icons/ContactIcon.astro"
+import ProyectosSection from "../components/ProyectsSection.astro"
+---
+
+<Layout title='Flavius Catalin Neacsu - Desarrollador y Programador Web' description='Entusiaste de la programcion y el desarrollo web.'>
+<main class="w-full max-w-md md:max-w-full p-2 mx-auto">
+    <Section classname="mt-8 px-2 md:px-4">
+      <h1 class="font-bold my-1 text-5xl inline-flex items-center gap-x-2">Flavius Catalin Neacsu </h1>
+      <a href="https://www.linkedin.com/in/flaviuscatalinneacsu/" class="w-fit" target="_blank" rel="noopener">
+        <Badge>Disponible para trabajar</Badge>
+      </a>
+      <h2 class="my-4  text-pretty text-xl font-normal opacity-80"><span class="text-violet-700  font-medium">Desarrollador Web</span>. Disfruto creando aplicaciones funcionales, eficientes y atractivas. Me apasiona la programación y aprender cosas nuevas.</h2>
+      <ul class="flex items-center gap-x-2 md:gap-x-4">
+        <li>
+          <SocialLink link="https://github.com/kete102">
+            <GitHubIcon class="size-6"/> GitHub
+          </SocialLink>
+        </li>
+        <li>
+          <SocialLink link="https://www.linkedin.com/in/flaviuscatalinneacsu/">
+            <LinkedInIcon class="size-6"/> LinkedIn
+          </SocialLink>
+        </li>
+      </ul>
+    </Section>
+    <ProyectosSection/>
+    <Section id="#sobre-mi" classname="mt-20 p-2 md:px-4">
+      <h2 class="inline-flex items-center gap-2 font-bold text-2xl"><UserIcon class="size-8"/>Sobre mí</h2>
+    </Section>
+    <Section id="#contacto" classname="mt-20 p-2 md:px-4">
+      <h2 class="inline-flex items-center gap-2 font-bold text-2xl"><ContactIcon class="size-8"/>Contacto</h2>
+    </Section>
+  </main>
+</Layout>
