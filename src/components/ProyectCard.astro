@@ -1,0 +1,41 @@
+---
+const { proyect } = Astro.props
+import type { Tag } from '@/constants/proyects'
+---
+
+<article
+	class='cursor pointer col-span-12 flex h-fit w-full rounded-lg bg-zinc-900/20 p-3 shadow-2xl transition-all backdrop:blur-xl hover:scale-105 dark:bg-zinc-900 sm:col-span-4 md:w-[600px]'
+>
+	<a
+		href={proyect.link}
+		rel='noopener'
+		target='_blank'
+		class='flex flex-col justify-start'
+	>
+		<div>
+			<h5
+				class='mb-2 text-2xl font-bold tracking-tight text-gray-950 dark:text-white'
+			>
+				{proyect.title}
+			</h5>
+			<p class='text-pretty font-normal text-zinc-950/70'>
+				{proyect.description}
+			</p>
+		</div>
+
+		<div class='mt-3'>
+			<ul class='flex flex-wrap items-center gap-x-1 gap-y-2'>
+				{
+					proyect.techStack.map((tag: Tag) => (
+						<li
+							class={`inline-flex items-center gap-2 rounded-full px-1.5 py-0.5 ${tag.class}`}
+						>
+							<span class='font-normal'>{tag.name}</span>
+							<tag.icon class='size-5' />
+						</li>
+					))
+				}
+			</ul>
+		</div>
+	</a>
+</article>
