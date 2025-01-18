@@ -8,6 +8,8 @@ import TypescriptIcon from '@/components/icons/TypescriptIcon.astro'
 import NeovimIcon from '@/components/icons/NeovimIcon.astro'
 import TmuxIcon from '@/components/icons/TmuxIcon.astro'
 import WeztermIcon from '@/components/icons/WeztermIcon.astro'
+import BunIcon from '@/components/icons/BunIcon.astro'
+import AstroIcon from '@/components/icons/AstroIcon.astro'
 
 const TAGS = {
 	MONGO: {
@@ -59,8 +61,20 @@ const TAGS = {
 		name: 'Wezterm',
 		class: 'bg-violet-500 border-2 border-violet-900 text-white',
 		icon: WeztermIcon
+	},
+	BUN: {
+		name: 'Bun',
+		class: 'bg-pink-500 border-2 border-pink-900 text-white',
+		icon: BunIcon
+	},
+	ASTRO: {
+		name: 'Astro',
+		class: 'bg-orange-800 border-2 border-orange-900 text-white',
+		icon: AstroIcon
 	}
 }
+
+export type Tag = (typeof TAGS)['ASTRO']
 
 export const PROYECTS = [
 	{
@@ -78,6 +92,20 @@ export const PROYECTS = [
 		]
 	},
 	{
+		title: 'Movies App',
+		description:
+			'Aplicación web para explorar y gestionar información de películas, desarrollada con React, TypeScript y TailwindCSS. Consume datos desde una API externa.',
+		link: 'https://github.com/kete102/movies-app',
+		image: '#', // Replace with an image URL or path to a project screenshot
+		techStack: [
+			TAGS.REACT,
+			TAGS.TYPESCRIPT,
+			TAGS.TAILWINDCSS,
+			TAGS.BUN,
+			TAGS.ASTRO
+		]
+	},
+	{
 		title: 'FIFO Tasks',
 		description: `Herramienta para gestionar procesos y tareas siguiendo el principio "First In, First Out.`,
 		link: 'https://github.com/kete102/FIFO-prueba-tecnica',
@@ -85,17 +113,9 @@ export const PROYECTS = [
 		techStack: [TAGS.REACT, TAGS.TAILWINDCSS, TAGS.FIREBASE]
 	},
 	{
-		title: 'Movies App',
-		description:
-			'Buscador de películas usando una API.Incluye funciones de filtrado, ordenación y optimización de rendimiento.',
-		link: 'https://github.com/kete102/movies-app',
-		image: '#',
-		techStack: [TAGS.REACT, TAGS.TYPESCRIPT]
-	},
-	{
 		title: 'Cat facts',
 		description:
-			'This project fetches a random cat fact and generates a custom cat image based on the first three words of the fact. The generated cat image is personalized with the words extracted from the fact.',
+			'Este proyecto obtiene un hecho aleatorio sobre gatos y genera una imagen personalizada de un gato basada en las primeras tres palabras del hecho. La imagen generada del gato se personaliza con las palabras extraídas del hecho.',
 		link: 'https://github.com/kete102/Cat-Facts-with-Image',
 		image: '#',
 		techStack: [TAGS.REACT, TAGS.TYPESCRIPT]
