@@ -3,6 +3,8 @@ import Badge from '@/components/Badge.astro'
 import GitHubIcon from '@/components/icons/GitHubIcon.astro'
 import LinkedInIcon from '@/components/icons/LinkedInIcon.astro'
 import SocialLink from '@/components/SocilaLink.astro'
+import { Image } from 'astro:assets'
+import fotoPortada from '@/assets/foto.jpeg'
 ---
 
 <div class='inline-flex items-center md:gap-x-6'>
@@ -11,10 +13,10 @@ import SocialLink from '@/components/SocilaLink.astro'
 	>
 		Flavius Catalin Neacsu
 	</h1>
-	<img
-		src='https://lh3.googleusercontent.com/ogw/AF2bZyhAbv3QFpmVf9oiRmY6zSjZt6I5ij-Ptbdkqfk2oB-O-ztW=s32-c-mo'
+	<Image
+		src={fotoPortada}
 		alt='flavius photo'
-		class='h-14 w-14 rounded-full'
+		class='h-20 w-20 rounded-full object-cover'
 	/>
 </div>
 <a
